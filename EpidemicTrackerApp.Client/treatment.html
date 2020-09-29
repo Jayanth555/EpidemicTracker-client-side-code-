@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap" rel="stylesheet" />
+    <script src="script/treatment.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+</head>
+
+<body style="background-image: url(image.jpg);background-size:cover;">
+    <div class="btn-group d-flex">
+        <a href="index.html" target="index.html" class="btn btn-outline-info">Home</a>
+        <a href="patient.html" class="btn btn-info">Patient</a>
+        <a href="address.html" class="btn btn-info">Address</a>
+        <a href="phonenumber.html" class="btn btn-info">Phone Number</a>
+        <a href="hospital.html" class="btn btn-info">Hospital</a>
+        <a href="disease.html" class="btn btn-info">Disease</a>
+        <a href="treatment.html" class="btn btn-info">Treatment</a>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 form-padding">
+            <form id="form-reset" onsubmit="event.preventDefault();" autocomplete="off">
+                <table class="data-form">
+                    <tr>
+                        <td colspan="2">
+                            <h3> Treatment Details </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Treatment ID </td>
+                        <td><input type="text" id="txt-id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><label for="users"> Hopital </label></td>
+                        <td><select id="select-hospital" class="dropbtn" required></select></td>
+                    </tr>
+                    <tr>
+                        <td> Admitted on </td>
+                        <td><input type="date" id="txt-ao"></td>
+                    </tr>
+                    <tr>
+                        <td> Current stage </td>
+                        <td> <select id="txt-stage">
+                                <option value="Active Case">Active Case</option>
+                                <option value="Cured Case">Cured Case</option>
+                                <option value="Death Case">Death Case</option>
+                            </select>
+                            <label for="stage"></label></td>
+                    </tr>
+                    <tr>
+                        <td> Relieving date </td>
+                        <td><input type="date" id="txt-rd"></td>
+                    </tr>
+                    <tr>
+                        <td> Is Fatality </td>
+                        <td><input type="text" id="txt-if"></td>
+                    </tr>
+                    <tr>
+                        <td> Prescription </td>
+                        <td><input type="text" id="txt-ptn"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="users"> Disease </label></td>
+                        <td><select id="select-disease" class="dropbtn" required></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="users"> Patient </label></td>
+                        <td><select id="select-patient" class="dropbtn" required></select></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan=" 2">
+                            <button class="btn btn-outline-info btn-block" onclick="saveTreatment()">Submit</button>
+                            <button class="btn btn-outline-info btn-block" onclick="clearForm()">Reset</button>
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6">
+            <p id="demo"></p>
+            <input type="text" id="myInput" class="search-bar" onkeyup="mySearch()" autocomplete="off"
+                placeholder="Search for Names.." title="Type in a name">
+            <table class="table table-striped data-table" id="search">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th>Name</th>
+                        <th>AdmittedDate</th>
+                        <th>CurrentStage</th>
+                        <th>RelievingDate</th>
+                        <th>Isfatality</th>
+                        <th>Prescription</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="treatmentdata">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

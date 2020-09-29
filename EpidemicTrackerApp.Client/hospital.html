@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap" rel="stylesheet" />
+    <script src="script/hospital.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+</head>
+
+<body style="background-image: url(image.jpg);background-size:cover;">
+    <div class="btn-group d-flex">
+            <a href="index.html" target="index.html" class="btn btn-outline-info">Home</a>
+            <a href="patient.html" class="btn btn-info">Patient</a>
+            <a href="address.html" class="btn btn-info">Address</a>
+            <a href="phonenumber.html" class="btn btn-info">Phone Number</a>
+            <a href="hospital.html" class="btn btn-info">Hospital</a>
+            <a href="disease.html" class="btn btn-info">Disease</a>
+            <a href="treatment.html" class="btn btn-info">Treatment</a>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 form-padding">
+            <form id="form-reset" onsubmit="event.preventDefault();" autocomplete="off">
+                <table class="data-form ">
+                    <tr>
+                        <td colspan="2">
+                            <h3>Hospital Details</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hospital ID</td>
+                        <td><input type="text" id="txt-id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Hospital Name</td>
+                        <td><input type="text" id="txt-hn"></td>
+                    </tr>
+                    <tr>
+                        <td colspan=" 2">
+                            <button class="btn btn-outline-info btn-block" onclick="saveHospital()">Submit</button>
+                            <button class="btn btn-outline-info btn-block" onclick="clearForm()"
+                                value="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <p id="demo"></p>
+            <table class="table table-striped data-table">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th>Hospital Name</th>
+                        <th>Actions<th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;" id="hospitaldata">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+    <script src="script/address.js"></script>
+</head>
+
+
+<body style="background-image: url(image.jpg);background-size:cover;">
+    <div class="btn-group d-flex">
+        <a href="index.html" target="index.html" class="btn btn-outline-info">Home</a>
+        <a href="patient.html" class="btn btn-info">Patient</a>
+        <a href="address.html" class="btn btn-info">Address</a>
+        <a href="phonenumber.html" class="btn btn-info">Phone Number</a>
+        <a href="hospital.html" class="btn btn-info">Hospital</a>
+        <a href="disease.html" class="btn btn-info">Disease</a>
+        <a href="treatment.html" class="btn btn-info">Treatment</a>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 form-padding">
+            <form id="form-reset" onsubmit="event.preventDefault();" autocomplete="off">
+                <table class="data-form">
+                    <tr>
+                        <td colspan="2">
+                            <h3>Address Details</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address Id</td>
+                        <td><input type="text" id="txt-id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Address Type</td>
+                        <td><select id="txt-at">
+                                <option value="Permanent">Permanent</option>
+                                <option value="Current">Current</option>
+                                <option value="Organization">Organization</option>
+                                <option value="Business">Business</option>
+                            </select></td>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" id="txt-ad"></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" id="txt-ct"></td>
+                    </tr>
+                    <tr>
+                        <td> Pincode</td>
+                        <td><input type="text" id="txt-pc"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label for="users"><b>Patient</b></label></td>
+                        <td><select id="select-patient"></select></td>
+                    </tr> 
+
+                    <tr>
+                        <td><label for="users"><b>State</b></label></td>
+                        <td><select id="select-state"></select></td>
+                    </tr> 
+                    <tr>
+                        <td><label for="users"><b>Country</b></label></td>
+                        <td><select id="select-country"></select></td>
+                    </tr> 
+                    
+                    <tr>
+                        <td> Select
+                       <td> <input type="radio" onclick="showPatient();" />
+                           Hospital
+                           <div class="hide" id="div-1">
+                               <label for="users"></label>
+                               <select id="select-hospital"></select>
+                           </div>
+                           <br>
+                          
+                      </td>
+                   </tr>
+                    <!-- <tr>
+                        <td><label for="users"><b>Patient</b></label></td>
+                        <td><select id="select-patient"></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="users"><b>Hopital</b></label></td>
+                        <td><select id="select-hospital"></select></td>
+                    </tr>
+                    <tr> -->
+
+                    <td colspan=" 2">
+                        <button class="btn btn-outline-info btn-block" onclick="saveAddress()">Submit</button>
+                        <button class="btn btn-outline-info btn-block" onclick="clearForm()">Reset</button>
+
+                    </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <p id="demo"></p>
+            <input type="text" id="myInput" class="search-bar" onkeyup="mySearch()" autocomplete="off"
+            placeholder="Search for Names.." title="Type in a name">
+            <table class="table table-striped data-table" id="search">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                       <th>AddressType</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Pincode</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="addressData">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="script/statecases.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+</head>
+<body style="background-image: url(image.jpg);background-size:cover;">
+<header>
+    <div>
+        <a href="index.html" class="main-header">Epidemic Tracker</a>
+    </div>
+    <div class="header-tabs">
+        <a style="float: right; cursor: pointer;" onclick="openForm()" ondblclick="closeForm()"> Account</a>
+        <div class="form-popup" id="myForm">
+            <form id="form_id" onSubmit="return checkPassword(this)" autocomplete="off" class="form-container">
+                <div class="cont">
+                    <div class="form sign-in">
+                        <h2>Sign In</h2>
+                        <label>
+                            <input type="text" placeholder="Enter UserName" id="txt-un" />
+                        </label>
+                        <label>
+                            <label>
+                                <div class="first-example"><input placeholder="Enter Password" type="password"
+                                        id="txt-pwd"><i id="pass-status" class="fa fa-eye" aria-hidden="true"
+                                        onClick="viewPassword()"></i></div>
+                            </label>
+                        </label>
+                        <button class="submit" onclick="signIn()" type="button">Sign In</button>
+                        <label><button class="submit" onclick="closeForm()" value="Close" />Close</button></label>
+                    </div>
+                    <div class="sub-cont">
+                        <div class="img">
+                            <div class="img-text m-up">
+                                <h2>New here?</h2>
+                                <p>Sign up!</p>
+                            </div>
+                            <div class="img-text m-in">
+                                <h2>One of us?</h2>
+                                <p>If you already has an account, just sign in</p>
+                            </div>
+                            <div class="img-btn">
+                                <span class="m-up">Sign Up</span>
+                                <span class="m-in">Sign In</span>
+                            </div>
+                        </div>
+                        <div class="form sign-up">
+                            <h2>Sign Up</h2>
+                            <label><input type="text" placeholder="Enter FirstName" id="txt-rfn" /></label>
+                            <label><input type="text" placeholder="Enter LastName" id="txt-rln" /></label>
+                            <label><input type="text" placeholder="Enter UserName" id="txt-run" /></label>
+                            <label>
+                                <div class="first-example"><input type="password" placeholder="Enter Password"
+                                        id="txt-rpwd"></div>
+                            </label>
+                            <label><input type="password" placeholder="Confirm Password" id="txt-repwd" /></label>
+                            <label><button class="submit" onclick=" return registerForm(this)" id="register" input
+                                    type=submit value="submit" />Submit</button></label>
+                            <label><button class="submit" onclick="closeForm()" value="Close" />Close</button></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a class="header-tabs" href="trackerviews.html"> Tracker Views</a>
+    </div>
+    <div>
+        <a class="header-tabs" href="guidelines.html"> Guidelines and Resources</a>
+    </div>
+</header>
+
+
+    <div class="data-background">
+        <div class="data">
+            Tracker Views
+        </div>
+        <p id="demo">
+        </p>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Active Case</th>
+                    <th>Cured Case</th>
+                    <th>Death Case</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;" id="casesData"></tbody>
+
+        </table>
+    </div>
+    </body>
+
+
+</html>

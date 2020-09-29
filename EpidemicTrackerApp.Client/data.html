@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script/data.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+</head>
+<body>
+    <div class="btn-group d-flex">
+        <a href="index.html" target="index.html" class="btn btn-outline-info">Home</a>
+        <a href="patient.html" class="btn btn-info">Patient</a>
+        <a href="hospital.html" class="btn btn-info">Hospital</a>
+        <a href="disease.html" class="btn btn-info">Disease</a>
+        <a href="address.html" class="btn btn-info">Address</a>
+        <a href="phonenumber.html" class="btn btn-info">Phone Number</a>
+        <a href="treatment.html" class="btn btn-info">Treatment</a>
+    </div>
+    <div class="data-background">
+        <div class="data">
+            Patient Details
+        </div>
+        <p id="demo">
+        </p>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Aadhar</th>
+                    <th>Occupation</th>
+                    <th>WorkName</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;"id="patientData">
+            </tbody>
+        </table>
+        <div class="data">
+            Address Details
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Address Type</th>
+                    <th>City</th>
+                    <th>Pincode</th>
+                    <th>AddressA</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;"id="addressData">
+            </tbody>
+        </table>
+        <div class="data">
+            PhoneNumber Details
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Type</th>
+                    <th>Phonenumber</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;" id="phoneData">
+            </tbody>
+        </table>
+        <div class="data">
+            Hospital Details
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Hospital Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;" id="hospitalData">
+            </tbody>
+        </table>
+        <div class="data">
+            Disease Details
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Disease Name</th>
+                    <th>Disease Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;" id="diseaseData">
+            </tbody>
+        </table>
+        <div class="data">
+            Treatment Details
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Admitted</th>
+                    <th>CurrentStage</th>
+                    <th>Reliving Date</th>
+                    <th>Is Fatality</th>
+                    <th>Prescription</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;" id="treatmentData">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

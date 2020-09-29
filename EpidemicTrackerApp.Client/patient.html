@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap" rel="stylesheet" />
+    <script src="script/patient.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+</head>
+<div id="test"></div>
+<div style="font-size: 30px;" id="test"></div>
+<body style="background-image: url(image.jpg);background-size:inherit;">
+    <div class="btn-group d-flex">
+        <a href="index.html" target="index.html" class="btn btn-outline-info">Home</a>
+        <a href="patient.html" class="btn btn-info">Patient</a>
+        <a href="address.html" class="btn btn-info">Address</a>
+        <a href="phonenumber.html" class="btn btn-info">Phone Number</a>
+        <a href="hospital.html" class="btn btn-info">Hospital</a>
+        <a href="disease.html" class="btn btn-info">Disease</a>
+        <a href="treatment.html" class="btn btn-info">Treatment</a>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 form-padding">
+            <form id="form-reset" onsubmit="event.preventDefault();" autocomplete="off">
+                <table class="data-form">
+                    <tr>
+                        <td colspan="2">
+                            <h3>Patient Details</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Patient ID </td>
+                        <td><input type="text" id="txt-id" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> Name </td>
+                        <td><input type="text" id="txt-name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td> Age </td>
+                        <td><input type="text" id="txt-age" name="age"></td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td><select id="btn-sex">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                        <td> Aadhar No.</td>
+                        <td><input type="text" id="txt-aadhar" name="aadhar"></td>
+                    </tr>
+                    <tr>
+                        <td> Occupation </td>
+                        <td><input type="text" id="txt-oc" name="occupation"></td>
+                    </tr>
+                    <tr>
+                        <td> Work Name </td>
+                        <td><input type="text" id="txt-wn" name="workName"></td>
+                    </tr>
+                    <tr>
+                        <td colspan=" 2">
+                            <button class="btn btn-outline-info btn-block" onclick="savePatient()">Submit</button>
+                            <button class="btn btn-outline-info btn-block" onclick="clearForm()">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <input type="text" id="myInput" class="search-bar" onkeyup="mySearch()" autocomplete="off"
+                placeholder="Search for Names.." title="Type in a name">
+            <table class="table table-striped data-table" id="search">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Aadhar</th>
+                        <th>Occupation</th>
+                        <th>WorkName</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patientdata">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

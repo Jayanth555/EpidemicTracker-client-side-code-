@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="script/registerform.js"></script>
+  <script src="script/uservalidate.js"></script>
+  <script src="script/index.js"></script>
+  <script src="script/patient.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles\styling.css" />
+  <title>Epidemic Tracker</title>
+</head>
+
+<body style="background-image: url(image.jpg);background-size:cover;">
+  <header>
+    <div>
+      <a href="index.html" class="main-header">Epidemic Tracker</a>
+    </div>
+    <div class="header-tabs">
+      <a style="float: right; cursor: pointer;" onclick="openForm()" ondblclick="closeForm()"> Account</a>
+      <div class="form-popup" id="myForm">
+        <form id="form_id" onSubmit="return checkPassword(this)" autocomplete="off" class="form-container">
+          <div class="cont">
+            <div class="toggle sign-in">
+              <h2>Sign In</h2>
+              <label class="togglelabel">
+                <input class="registerinput" type="text" placeholder="Enter UserName" id="txt-un" />
+              </label>
+              <label class="togglelabel">
+                <label class="togglelabel">
+                  <div class="first-example"><input class="registerinput" placeholder="Enter Password" type="password"
+                      id="txt-pwd"><i id="pass-status" class="fa fa-eye" aria-hidden="true"
+                      onClick="viewPassword()"></i></div>
+                </label>
+              </label>
+              <button class="submit togglebutton" onclick="signIn()" type="button">Sign In</button>
+              <label class="togglelabel">
+                <button class="submit togglebutton"   onclick="closeForm()" value="Close" >Close</button></label>
+            </div>
+            <div class="sub-cont">
+              <div class="img">
+                <div class="img-text m-up">
+                  <h2>New here?</h2>
+                  <p>Sign up!</p>
+                </div>
+                <div class="img-text m-in">
+                  <h2>One of us?</h2>
+                  <p>If you already has an account, just sign in</p>
+                </div>
+                <div class="img-btn">
+                  <span class="m-up">Sign Up</span>
+                  <span class="m-in">Sign In</span>
+                </div>
+              </div>
+              <div class="toggle sign-up">
+                <h2>Sign Up</h2>
+                <label class="togglelabel">
+                  <input class="registerinput" type="text" placeholder="Enter FirstName" id="txt-rfn" required /></label>
+                <label class="togglelabel">
+                  <input class="registerinput" type="text" placeholder="Enter LastName" id="txt-rln" required /></label>
+                <label class="togglelabel">
+                  <input class="registerinput" type="text" placeholder="Enter UserName" id="txt-run" required /></label>
+                <label class="togglelabel">
+                  <div class="first-example"><input class="registerinput" type="password" placeholder="Enter Password"
+                      id="txt-rpwd" required></div>
+                </label>
+                <label class="togglelabel">
+                  <input class="registerinput" type="password" placeholder="Confirm Password" id="txt-repwd" required /></label>
+                <label class="togglelabel">
+                  <button class="submit togglebutton" onclick=" return registerForm(this)" id="register" input type=submit
+                    value="submit" />Submit</button></label>
+                <label class="togglelabel">
+                  <button class="submit togglebutton"  onclick="closeForm()" value="Close" >Close</button></label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <a class="header-tabs" href="trackerviews.html"> Tracker Views</a>
+    </div>
+    <div>
+      <a class="header-tabs" href="guidelines.html"> Guidelines and Resources</a>
+    </div>
+  </header>
+
+  <div class="tracker-display">
+    <center>
+
+      <table class=" table tracker-table">
+        <tr>
+          <td>
+            <b>COVID 19<br />(TRACKER INDIA)</b><br /><br />
+          </td>
+
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-address-book"></i>ACTIVE CASES: <br />
+            <i class="fa fa-heartbeat"></i>CURED CASES :<br />
+            <i class="fa fa-bed"></i>DEATH CASES :<br />
+          </td>
+          <td>
+            <div class="cases" id="cases"></div>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </div>
+  <br /><br />
+  </div>
+
+
+</body>
+
+</html>
+<script>
+  document.querySelector('.img-btn').addEventListener('click', function () {
+    document.querySelector('.cont').classList.toggle('s-signup');
+  }
+  );
+
+  function viewPassword() {
+    var passwordInput = document.getElementById('txt-pwd');
+    var passStatus = document.getElementById('pass-status');
+
+    if (passwordInput.type == 'password') {
+      passwordInput.type = 'text';
+      passStatus.className = 'fa fa-eye-slash';
+
+    }
+    else {
+      passwordInput.type = 'password';
+      passStatus.className = 'fa fa-eye';
+    }
+  }
+</script>

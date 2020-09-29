@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tracker Views</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/styling.css" />
+    <script src="script/trackerviews.js"></script>
+</head>
+<body style="background-image: url(image.jpg);background-size:cover;">
+    <header>
+        <div>
+          <a href="index.html" class="main-header">Epidemic Tracker</a>
+        </div>
+        <div class="header-tabs">
+          <a style="float: right; cursor: pointer;" onclick="openForm()" ondblclick="closeForm()"> Account</a>
+          <div class="form-popup" id="myForm">
+            <form id="form_id" onSubmit="return checkPassword(this)" autocomplete="off" class="form-container">
+              <div class="cont">
+                <div class="toggle sign-in">
+                  <h2>Sign In</h2>
+                  <label class="togglelabel">
+                    <input class="registerinput" type="text" placeholder="Enter UserName" id="txt-un" />
+                  </label>
+                  <label class="togglelabel">
+                    <label class="togglelabel">
+                      <div class="first-example"><input class="registerinput" placeholder="Enter Password" type="password"
+                          id="txt-pwd"><i id="pass-status" class="fa fa-eye" aria-hidden="true"
+                          onClick="viewPassword()"></i></div>
+                    </label>
+                  </label>
+                  <button class="submit togglebutton" onclick="signIn()" type="button">Sign In</button>
+                  <label class="togglelabel">
+                    <button class="submit togglebutton"   onclick="closeForm()" value="Close" >Close</button></label>
+                </div>
+                <div class="sub-cont">
+                  <div class="img">
+                    <div class="img-text m-up">
+                      <h2>New here?</h2>
+                      <p>Sign up!</p>
+                    </div>
+                    <div class="img-text m-in">
+                      <h2>One of us?</h2>
+                      <p>If you already has an account, just sign in</p>
+                    </div>
+                    <div class="img-btn">
+                      <span class="m-up">Sign Up</span>
+                      <span class="m-in">Sign In</span>
+                    </div>
+                  </div>
+                  <div class="toggle sign-up">
+                    <h2>Sign Up</h2>
+                    <label class="togglelabel">
+                      <input class="registerinput" type="text" placeholder="Enter FirstName" id="txt-rfn" /></label>
+                    <label class="togglelabel">
+                      <input class="registerinput" type="text" placeholder="Enter LastName" id="txt-rln" /></label>
+                    <label class="togglelabel">
+                      <input class="registerinput" type="text" placeholder="Enter UserName" id="txt-run" /></label>
+                    <label class="togglelabel">
+                      <div class="first-example"><input class="registerinput" type="password" placeholder="Enter Password"
+                          id="txt-rpwd"></div>
+                    </label>
+                    <label class="togglelabel">
+                      <input class="registerinput" type="password" placeholder="Confirm Password" id="txt-repwd" /></label>
+                    <label class="togglelabel">
+                      <button class="submit togglebutton" onclick=" return registerForm(this)" id="register" input type=submit
+                        value="submit" />Submit</button></label>
+                    <label class="togglelabel">
+                      <button class="submit togglebutton"  onclick="closeForm()" value="Close" >Close</button></label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          <a class="header-tabs" href="trackerviews.html"> Tracker Views</a>
+        </div>
+        <div>
+          <a class="header-tabs" href="guidelines.html"> Guidelines and Resources</a>
+        </div>
+      </header>
+        <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>State</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;" id="statesData">
+    
+        </tbody>
+    </table>
+</body>
+</html>
